@@ -6,7 +6,14 @@
     <title>Awesome Readmore</title>
     <meta name="description" content="Boilerplate built with Astro using React and Tailwind CSS">
     <meta name="author" content="Emma">
-	<link rel="stylesheet" href="awesome-read-more.css" />
+	<link rel="stylesheet" href="awesome_read_more.css" />
+
+<style>
+label{
+	display:block;
+	clear:both;
+}
+</style>
 
 </head>
 
@@ -27,5 +34,79 @@
 	<p id="easy_notifications4">
 		In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
 
+
+	<h1>TEST</h1>
+
+
+	<span class="awesome_read_more_wrapper">
+	<label
+		class='awesome_read_more'
+		for='awesome_read_more_line_22'
+	>
+		Optional Label Text Here #1 (you can also use :after) 
+	</label>
+
+	<input
+		type='checkbox'
+		class='awesome_read_more'
+		id='awesome_read_more_line_22'
+	/>
+
+	<div class='awesome_read_more_hidden'>
+
+	<p>
+		Your read more content here....
+	</p>
+	<p>
+		Style it anyway you want....
+	</p>
+	<p>
+		Anything can be here, it just has to be within the "awesome_read_more" class and must be immediately proceeding the checkbox.
+	</p>
+
+	<p>
+		Also, the checkbox needs a unique ID and <label> needs a corresponding unique for="". The trick I like to use for this is to use the line number shown in my IDE to ensure its unique 
+	</p>
+
+	</div>
+	</span>
+
+
+	<h1>TEST</h1>
+
+
+	<span class="awesome_read_more_wrapper">
+	<input
+		type='checkbox'
+		class='awesome_read_more'
+		id='awesome_read_more_line_23'
+	/>
+	<label
+		class='awesome_read_more'
+		for='awesome_read_more_line_23'
+	>
+		Optional Label Text Here #2 (you can also use :after) 
+	</label>
+
+	<div class='awesome_read_more_hidden'>
+
+	<p>
+		Your read more content here....
+	</p>
+	<p>
+		Style it anyway you want....
+	</p>
+	<p>
+		Anything can be here, it just has to be within the "awesome_read_more" class and must be immediately proceeding the checkbox.
+	</p>
+
+	<p>
+		Also, the checkbox needs a unique ID and <label> needs a corresponding unique for="". The trick I like to use for this is to use the line number shown in my IDE to ensure its unique 
+	</p>
+
+	</div>
+	</span>
+
+	
 </body>
 </html>

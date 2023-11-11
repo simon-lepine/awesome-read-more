@@ -1,0 +1,68 @@
+[type=checkbox].awesome_read_more{
+	display:none;
+}
+
+.awesome_read_more_wrapper{
+	margin:none;
+	padding:none;
+}
+
+/**
+ * note only first child is impacted
+ */
+[type=checkbox].awesome_read_more ~ .awesome_read_more_hidden{
+	display:none;
+	height:0px;
+	width:0px;
+}
+
+[type=checkbox]:checked.awesome_read_more ~.awesome_read_more_hidden{
+	display:initial;
+	height:initial;
+	width:initial;
+}
+
+input[type=checkbox] + label::before{
+	display:inline-block !important;
+	width:2rem;
+	font-size:200%;
+	content: '--';
+}
+input[type=checkbox]:checked + label::before{
+	content: '+';
+}
+
+/**
+ * usage
+<label
+	class='awesome_read_more'
+	for='awesome_read_more_line_23'
+>
+	Optional Label Text Here (you can also use :after) 
+</label>
+
+<input
+	type='checkbox'
+	class='awesome_read_more'
+	id='awesome_read_more_line_23'
+/>
+
+<div class='awesome_read_more'>
+
+<p>
+	Your read more content here....
+</p>
+<p>
+	Style it anyway you want....
+</p>
+<p>
+	Anything can be here, it just has to be within the "awesome_read_more" class and must be immediately proceeding the checkbox.
+</p>
+
+<p>
+	Also, the checkbox needs a unique ID and <label> needs a corresponding unique for="". The trick I like to use for this is to use the line number shown in my IDE to ensure its unique 
+</p>
+
+</div>
+
+ */
